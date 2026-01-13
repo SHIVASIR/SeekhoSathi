@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz | SeekhoSathi</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ===== CURSOR GLOW ===== -->
+<div id="cursor-glow"></div>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+
+    <h2>📘 SeekhoSathi</h2>
+
+    <!-- USER PROFILE -->
+    <div class="user-profile" onclick="toggleProfileMenu()">
+      <div class="avatar">👤</div>
+      <div>
+        <h4 id="userName">Guest User</h4>
+        <p class="user-role">Student</p>
+      </div>
+    </div>
+
+    <!-- PROFILE DROPDOWN -->
+    <div class="profile-menu" id="profileMenu">
+      <p>👤 Profile</p>
+      <p>⚙️ Settings</p>
+      <p onclick="logout()">🚪 Logout</p>
+    </div>
+
+    <!-- NAV -->
+    <a href="home.html">🏠 Home</a>
+    <a href="topic.html">📚 Learn</a>
+    <a href="quiz.html">📝 Quiz</a>
+
+    <a href="#" onclick="toggleDark()">🌙 Dark Mode</a>
+    <a href="#" onclick="window.history.back()">⬅ Back</a>
+
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
+
+    <!-- ===== QUIZ CONTENT ===== -->
+    <section class="main fade-up">
+      <div class="card tilt-card" style="max-width:720px;margin:auto;">
+
+        <h1 id="quizTopic">Quiz</h1>
+        <p class="subtitle">
+          Test your understanding and track your progress.
+        </p>
+
+        <!-- Question -->
+        <div id="quizBox" class="explanation-section">
+          Loading quiz...
+        </div>
+
+        <!-- Score -->
+        <p id="scoreBox" style="margin-top:16px;font-weight:600;"></p>
+
+        <!-- Next Button -->
+        <button
+          id="nextBtn"
+          class="magnetic"
+          style="display:none;margin-top:20px;"
+          onclick="nextQuestion()"
+        >
+          Next Question →
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer fade-up" style="margin-top:60px;">
+
+      <div class="feature-grid">
+
+        <div>
+          <h3>SeekhoSathi</h3>
+          <p>AI-powered learning companion.</p>
+        </div>
+
+        <div>
+          <h3>Quiz System</h3>
+          <p>AI MCQs</p>
+          <p>Score Tracking</p>
+          <p>Instant Feedback</p>
+        </div>
+
+        <div>
+          <h3>Next</h3>
+          <p>Improve Score</p>
+          <p>Practice More</p>
+        </div>
+
+      </div>
+
+      <p style="margin-top:30px;font-size:13px;color:#9CA3AF;">
+        © 2026 SeekhoSathi • All rights reserved
+      </p>
+
+    </footer>
+
+  </div>
+</div>
+
+<!-- ===== SCRIPT ===== -->
+<script src="script.js"></script>
+
+</body>
+</html>

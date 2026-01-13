@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SeekhoSathi – Learning ka Companion</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ===== CURSOR GLOW ===== -->
+<div id="cursor-glow"></div>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+
+    <h2>📘 SeekhoSathi</h2>
+
+    <!-- USER PROFILE -->
+    <div class="user-profile" onclick="toggleProfileMenu()">
+      <div class="avatar">👤</div>
+      <div>
+        <h4 id="userName">Guest User</h4>
+        <p class="user-role">Student</p>
+      </div>
+    </div>
+
+    <!-- PROFILE DROPDOWN -->
+    <div class="profile-menu" id="profileMenu">
+      <p>👤 Profile</p>
+      <p>⚙️ Settings</p>
+      <p onclick="logout()">🚪 Logout</p>
+    </div>
+
+    <!-- NAV -->
+    <a href="#hero">🏠 Home</a>
+    <a href="#how">⚙️ How it Works</a>
+    <a href="#features">✨ Features</a>
+    <a href="topic.html">📚 Start Learning</a>
+
+    <a href="#" onclick="toggleDark()">🌙 Dark Mode</a>
+    <a href="#" onclick="window.history.back()">⬅ Back</a>
+
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
+
+    <!-- ===== HERO ===== -->
+    <section class="main fade-up" id="hero">
+      <div class="card tilt-card">
+        <h1>Learn smarter, not harder.</h1>
+        <p class="subtitle">
+          SeekhoSathi is an AI-powered learning platform that helps students
+          understand concepts clearly before practicing them.
+        </p>
+
+        <button class="magnetic" onclick="goLogin()">Start Learning →</button>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="main fade-up" id="how">
+      <div class="card tilt-card">
+
+        <h1>How SeekhoSathi Works</h1>
+        <p class="subtitle">
+          A simple, structured learning flow designed for students.
+        </p>
+
+        <div class="explanation-section">
+          <h3>1️⃣ Choose a Topic</h3>
+          <p>Enter any topic you want to learn — DBMS, OS, Python, ML, or theory subjects.</p>
+        </div>
+
+        <div class="explanation-section">
+          <h3>2️⃣ Learn with AI</h3>
+          <p>Get AI-generated definitions, easy English explanations, and Hinglish explanations.</p>
+        </div>
+
+        <div class="explanation-section">
+          <h3>3️⃣ Practice with Quiz</h3>
+          <p>Test your understanding using AI-generated MCQs and track your score.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="main fade-up" id="features">
+      <div class="card">
+
+        <h1>Why SeekhoSathi?</h1>
+        <p class="subtitle">
+          Everything you need for clear and effective learning.
+        </p>
+
+        <div class="feature-grid">
+
+          <div class="feature-card tilt-card">
+            <h3>🤖 AI Learning</h3>
+            <p>AI-generated definitions and explanations.</p>
+          </div>
+
+          <div class="feature-card tilt-card">
+            <h3>🧠 Hinglish Support</h3>
+            <p>Learn in English + Hindi for better clarity.</p>
+          </div>
+
+          <div class="feature-card tilt-card">
+            <h3>📝 Smart Quiz</h3>
+            <p>AI-generated MCQs with score tracking.</p>
+          </div>
+
+          <div class="feature-card tilt-card">
+            <h3>🌙 Dark Mode</h3>
+            <p>Comfortable learning anytime.</p>
+          </div>
+
+          <div class="feature-card tilt-card">
+            <h3>🚀 Futuristic UI</h3>
+            <p>Neon glass, animations, and modern SaaS feel.</p>
+          </div>
+
+          <div class="feature-card tilt-card">
+            <h3>🎯 Learn First</h3>
+            <p>Understand concepts before practicing.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="main fade-up">
+      <div class="card tilt-card">
+        <h1>Start your learning journey today</h1>
+        <p class="subtitle">
+          Make learning simple, clear, and effective with SeekhoSathi.
+        </p>
+
+        <button class="magnetic" onclick="goLogin()">Get Started Now →</button>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer fade-up">
+
+      <div class="feature-grid">
+
+        <div>
+          <h3>SeekhoSathi</h3>
+          <p>AI-powered learning companion for students.</p>
+        </div>
+
+        <div>
+          <h3>Product</h3>
+          <p>AI Learning</p>
+          <p>Smart Quiz</p>
+          <p>Dark Mode</p>
+          <p>Modern UI</p>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <p>How it Works</p>
+          <p>Features</p>
+          <p>Roadmap</p>
+        </div>
+
+        <div>
+          <h3>Legal</h3>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+          <p>Disclaimer</p>
+        </div>
+
+      </div>
+
+      <p style="margin-top:30px;font-size:13px;color:#9CA3AF;">
+        © 2026 SeekhoSathi • All rights reserved
+      </p>
+
+    </footer>
+
+  </div>
+</div>
+
+<!-- ===== SCRIPT ===== -->
+<script src="script.js"></script>
+<script>
+  function goLogin() {
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>

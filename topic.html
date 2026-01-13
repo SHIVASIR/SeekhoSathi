@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Choose Topic | SeekhoSathi</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ===== CURSOR GLOW ===== -->
+<div id="cursor-glow"></div>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+
+    <h2>📘 SeekhoSathi</h2>
+
+    <!-- USER PROFILE -->
+    <div class="user-profile" onclick="toggleProfileMenu()">
+      <div class="avatar">👤</div>
+      <div>
+        <h4 id="userName">Guest User</h4>
+        <p class="user-role">Student</p>
+      </div>
+    </div>
+
+    <!-- PROFILE DROPDOWN -->
+    <div class="profile-menu" id="profileMenu">
+      <p>👤 Profile</p>
+      <p>⚙️ Settings</p>
+      <p onclick="logout()">🚪 Logout</p>
+    </div>
+
+    <!-- NAV -->
+    <a href="home.html">🏠 Home</a>
+    <a href="topic.html">📚 Learn</a>
+    <a href="quiz.html">📝 Quiz</a>
+
+    <a href="#" onclick="toggleDark()">🌙 Dark Mode</a>
+    <a href="#" onclick="window.history.back()">⬅ Back</a>
+
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
+
+    <!-- ===== TOPIC INPUT ===== -->
+    <section class="main fade-up">
+      <div class="card tilt-card" style="max-width:480px;margin:auto;">
+
+        <h1>What do you want to learn?</h1>
+        <p class="subtitle">
+          Enter any topic and start learning step by step with AI.
+        </p>
+
+        <input
+          type="text"
+          id="topicInput"
+          placeholder="e.g. DBMS, Operating System, Python"
+          style="width:100%;margin-top:16px;"
+        />
+
+        <button
+          class="magnetic"
+          style="margin-top:20px;width:100%;"
+          onclick="startLearning()"
+        >
+          Start Learning →
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer fade-up" style="margin-top:60px;">
+
+      <div class="feature-grid">
+
+        <div>
+          <h3>SeekhoSathi</h3>
+          <p>AI-powered learning companion.</p>
+        </div>
+
+        <div>
+          <h3>Product</h3>
+          <p>AI Learning</p>
+          <p>Smart Quiz</p>
+          <p>Dark Mode</p>
+        </div>
+
+        <div>
+          <h3>Resources</h3>
+          <p>How it Works</p>
+          <p>Features</p>
+        </div>
+
+      </div>
+
+      <p style="margin-top:30px;font-size:13px;color:#9CA3AF;">
+        © 2026 SeekhoSathi • All rights reserved
+      </p>
+
+    </footer>
+
+  </div>
+</div>
+
+<!-- ===== SCRIPT ===== -->
+<script src="script.js"></script>
+<script>
+  function startLearning() {
+    const topic = document.getElementById("topicInput").value.trim();
+
+    if (!topic) {
+      alert("Please enter a topic");
+      return;
+    }
+
+    localStorage.setItem("topic", topic);
+    window.location.href = "learn.html";
+  }
+</script>
+
+</body>
+</html>

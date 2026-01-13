@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Get Started | SeekhoSathi</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ===== CURSOR GLOW ===== -->
+<div id="cursor-glow"></div>
+
+<div class="layout">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar">
+
+    <h2>📘 SeekhoSathi</h2>
+
+    <a href="home.html">🏠 Home</a>
+    <a href="home.html#how">⚙️ How it Works</a>
+    <a href="home.html#features">✨ Features</a>
+
+    <a href="#" onclick="toggleDark()">🌙 Dark Mode</a>
+    <a href="#" onclick="window.history.back()">⬅ Back</a>
+
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="content">
+
+    <section class="main fade-up">
+      <div class="card tilt-card" style="max-width:420px;margin:auto;">
+
+        <h1>Welcome to SeekhoSathi</h1>
+        <p class="subtitle">
+          Your AI-powered learning companion.  
+          Learn concepts clearly before practicing.
+        </p>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="Email address"
+          style="width:100%;margin-top:16px;"
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          style="width:100%;margin-top:12px;"
+        />
+
+        <button
+          class="magnetic"
+          style="margin-top:22px;width:100%;"
+          onclick="goNext()"
+        >
+          Get Started →
+        </button>
+
+        <p style="margin-top:14px;font-size:13px;color:#9CA3AF;text-align:center;">
+          No signup required for demo
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer fade-up" style="margin-top:60px;">
+
+      <div class="feature-grid">
+
+        <div>
+          <h3>SeekhoSathi</h3>
+          <p>AI-powered learning companion.</p>
+        </div>
+
+        <div>
+          <h3>Product</h3>
+          <p>AI Learning</p>
+          <p>Smart Quiz</p>
+          <p>Dark Mode</p>
+        </div>
+
+        <div>
+          <h3>Legal</h3>
+          <p>Privacy Policy</p>
+          <p>Terms of Service</p>
+        </div>
+
+      </div>
+
+      <p style="margin-top:30px;font-size:13px;color:#9CA3AF;">
+        © 2026 SeekhoSathi • All rights reserved
+      </p>
+
+    </footer>
+
+  </div>
+</div>
+
+<!-- ===== SCRIPT ===== -->
+<script src="script.js"></script>
+<script>
+  function goNext() {
+    const email = document.getElementById("email").value.trim();
+
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
+
+    // Save username for sidebar profile
+    const name = email.split("@")[0];
+    localStorage.setItem("userName", name);
+
+    window.location.href = "topic.html";
+  }
+</script>
+
+</body>
+</html>
