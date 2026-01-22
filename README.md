@@ -107,7 +107,7 @@ This project demonstrates:
 
 ## 👤 Author
 
-**Shivanshu Kumar Singh**  
+**Shiwanshu Kumar Singh**  
 B.Tech CSE (Cloud Computing & Machine Learning)  
 Student | Learner | Developer  
 
