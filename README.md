@@ -72,7 +72,7 @@ Quiz Practice
 
 ---
 
-## ▶️ How to Run the Project
+## ▶️ How to Run the Project easily
 
 1. Download or clone the repository  
 2. Open the project folder in **VS Code**  
