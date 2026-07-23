@@ -6,7 +6,7 @@ The platform focuses on **clarity, simplicity, and structured learning**, inspir
 
 ---
 
-## 🌟 What is SeekhoSathi  ?
+## 🌟 What is the SeekhoSathi  ?
 
 SeekhoSathi helps learners:
 - Understand any topic in **simple English**
